@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="submit.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="photo">
+                <img src="https://pbs.twimg.com/profile_images/756420435991035904/F08ptIp8_400x400.jpg" style=" width: 100px; height: 100px;">
+            </div>
+            <h1 id="title" class="text-center">Tumaini la Maisha.org Survey Form</h1>
+            <p id="description" class="description text-center">
+                Thank you for taking the time to help us improve our services
+            </p>
+        </header>
+        <form action="submit.php" method="POST" id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age<span class="clue">(optional)</span></label
+            >
+            <input
+              type="number"
+              name="age"
+              id="number"
+              min="10"
+              max="105"
+              class="form-control"
+              placeholder="Age"
+              required />
+          </div>
+          <div class="form-group">
+            <p>Which option best describes your current situation?</p>
+            <select id="dropdown" name="role" class="form-control" required>
+              <option disabled selected value>Select current role</option>
+              <option value="Patient">Patient</option>
+              <option value="Survivor">Survivor</option>
+              <option value="Donor">Donor</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <p>Would you recommend Tumaini La Maisha to a friend?</p>
+            <label>
+              <input
+                name="user-recommend"
+                value="definitely"
+                type="radio"
+                class="input-radio"
+                checked
+              />Definitely</label
+            >
+            <label>
+              <input
+                name="user-recommend"
+                value="maybe"
+                type="radio"
+                class="input-radio"
+              />Maybe</label
+            >
+      
+            <label
+              ><input
+                name="user-recommend"
+                value="not-sure"
+                type="radio"
+                class="input-radio"
+              />Not sure</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>
+              What is your favorite feature of Tumaini la Maisha?
+            </p>
+            <select id="most-like" name="mostLike" class="form-control" required>
+              <option disabled selected value>Select an option</option>
+              <option value="challenges">Education and outreach</option>
+              <option value="projects">campaigns</option>
+              <option value="community">conferences</option>
+              <option value="openSource">Fundraising</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <p>
+              What would you like to see improved?
+              <span class="clue">(Check all that apply)</span>
+            </p>
+      
+            <label
+              ><input
+                name="prefer"
+                value="front-end-projects"
+                type="checkbox"
+                class="input-checkbox"
+              />Fund Raising Ideas</label
+            >
+            <label>
+              <input
+                name="prefer"
+                value="back-end-projects"
+                type="checkbox"
+                class="input-checkbox"
+              />Cancer Awareness and prevention</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="data-visualization"
+                type="checkbox"
+                class="input-checkbox"
+              />Access to Care</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="challenges"
+                type="checkbox"
+                class="input-checkbox"
+              />Advance Health Equity</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="open-source-community"
+                type="checkbox"
+                class="input-checkbox"
+              />Cancer Screening</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="gitter-help-rooms"
+                type="checkbox"
+                class="input-checkbox"
+              />Treatment & Support</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="videos"
+                type="checkbox"
+                class="input-checkbox"
+              />Advocacy</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="city-meetups"
+                type="checkbox"
+                class="input-checkbox"
+              />Survivorship Resources</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="wiki"
+                type="checkbox"
+                class="input-checkbox"
+              />Support Programs</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="forum"
+                type="checkbox"
+                class="input-checkbox"
+              />Forum</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="additional-courses"
+                type="checkbox"
+                class="input-checkbox"
+              />Research</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="comment"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+      
+          <div class="form-group">
+              
+            <button type="submit" id="submit" class="submit-button" >
+              Submit
+            </button>
+          </div>
+        </form>
+        
+      </div>
+      
+</body>
+
+</html>
